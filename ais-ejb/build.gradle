@@ -1,0 +1,41 @@
+
+dependencies {
+    compile project(':ais-core')  
+}
+
+/**
+ * 打包数据中心数据服务的EJB的Jar
+ */
+task jarAisEjb(type:Jar){
+    group 'build'
+    baseName = 'AIS-EJB'
+    from (
+            'build/classes/java/main',
+            'build/resources/main/ais',
+            configurations.compile.collect{it.name.contains('ais-core')?zipTree(it):'null'}
+    )
+    exclude('**/ejb/**/NNG*')
+}
+
+jarAisEjb.dependsOn(classes)
+
+/**
+ *  打包南宁接口服务的EJB的Jar 
+ */
+task jarNngEjb(type:Jar){
+    group 'build'
+    baseName = 'NNG-EJB'
+    from (
+            'build/classes/java/main',
+            'build/resources/main/nng',
+            configurations.compile.collect{it.name.contains('ais-core')?zipTree(it):'null'}
+    )
+    exclude('**/ejb/**/Aodb*')
+}
+
+jarNngEjb.dependsOn(classes)
+
+
+
+
+

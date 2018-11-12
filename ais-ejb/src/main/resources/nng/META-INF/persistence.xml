@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <!--南宁机场DataSources-->
+    <persistence-unit name="nngAodbDS" transaction-type="JTA">
+        <jta-data-source>java:jboss/datasources/nngAodbDS</jta-data-source>
+        <!--托管的实体类AODB基础表-->
+        <class>com.gxairport.ais.models.aodb.basic.Aircraft</class>
+        <class>com.gxairport.ais.models.aodb.basic.Airline</class>
+        <class>com.gxairport.ais.models.aodb.basic.EnsureItem</class>
+        <class>com.gxairport.ais.models.aodb.basic.AircraftSubtype</class>
+        <class>com.gxairport.ais.models.aodb.basic.Airport</class>
+        <class>com.gxairport.ais.models.aodb.basic.AirRouteDistance</class>
+        <class>com.gxairport.ais.models.aodb.basic.BaggageMakeupPosition</class>
+        <class>com.gxairport.ais.models.aodb.basic.BaggageReclaimCarousel</class>
+        <class>com.gxairport.ais.models.aodb.basic.BoardingBridge</class>
+        <class>com.gxairport.ais.models.aodb.basic.CAACDelayCategory</class>
+        <class>com.gxairport.ais.models.aodb.basic.CAACDelayCode</class>
+        <class>com.gxairport.ais.models.aodb.basic.Carrier</class>
+        <class>com.gxairport.ais.models.aodb.basic.CheckInClass</class>
+        <class>com.gxairport.ais.models.aodb.basic.CheckInDesk</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightClassification</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightCode</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightNature</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightResource</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightRoute</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightServiceType</class>
+        <class>com.gxairport.ais.models.aodb.basic.FlightStatus</class>
+        <class>com.gxairport.ais.models.aodb.basic.Gate</class>
+        <class>com.gxairport.ais.models.general.IBText</class>
+        <class>com.gxairport.ais.models.aodb.basic.Runway</class>
+        <class>com.gxairport.ais.models.aodb.basic.Stand</class>
+        <class>com.gxairport.ais.models.aodb.basic.Terminal</class>
+        <!--航班数据表-->
+        <class>com.gxairport.ais.models.aodb.flight.BasicFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.ScheduledFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.DynamicFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.LinkedFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.BasicLinkedFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.SeasonFlight</class>
+        <!--航班集合数据表-->
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicStop</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicShareFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicGate</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicCheckIn</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicBaggageReclaimCarousel</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicBaggageMakeupPosition</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicEnsureService</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicPayPassenger</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.BasicLoad</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicBaggageMakeupPosition</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicCheckIn</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicEnsureService</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicGate</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicLoad</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicBaggageReclaimCarousel</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.DynamicPayPassenger</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.HistoryArrivalGoodsCount</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.HistoryDepartureCheckCount</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.HistoryDepartureLoadCount</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.HistoryEnsureService</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.HistoryLoad</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.HistoryPassengerCount</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.ScheduledBaggageMakeupPosition</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.ScheduledBaggageReclaimCarousel</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.ScheduledCheckIn</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.ScheduledGate</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.ScheduledStop</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.ScheduledShareFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.SeasonBaggageMakeupPosition</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.SeasonBaggageReclaimCarousel</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.SeasonCheckIn</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.SeasonGate</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.SeasonShareFlight</class>
+        <class>com.gxairport.ais.models.aodb.flight.collection.SeasonStop</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+    <!--通用服务DataSources-->
+    <persistence-unit name="AisGeneralDS" transaction-type="JTA">
+        <jta-data-source>java:jboss/datasources/AisGeneralDS</jta-data-source>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+
+
+</persistence>

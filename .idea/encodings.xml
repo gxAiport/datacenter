@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/dao/IDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/dao/impl/DaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/dao/parameter/ExpressionUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/enums/AggregationFieldType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/enums/CumulativeDateType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/enums/QueryGroupDate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/enums/QuerySortMode.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ais-core/src/main/java/com/gxairport/ais/models/aodb/basic/Aircraft.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

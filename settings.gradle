@@ -1,0 +1,4 @@
+rootProject.name = 'datacenter'
+include 'ais-core'
+include 'ais-ejb'
+
